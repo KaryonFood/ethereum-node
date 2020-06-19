@@ -6,6 +6,15 @@ on:
 
 jobs:
   build:
-  name: Build peer
-  runs-on: ubuntu-latest
-  steps:
+    name: Build peer
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Build docker container
+        run: |
+          docker build peer/ --tag f2fmarket/ethereum-node:peer
+          docker push f2fmarket/ethereum-node:peer
+        env:
+          CI: false
