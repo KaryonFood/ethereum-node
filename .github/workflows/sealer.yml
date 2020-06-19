@@ -1,0 +1,15 @@
+name: Build Sealer
+
+jobs:
+  build sealer:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Build docker container
+        run: |
+          docker build
+        env:
+          CI: false
