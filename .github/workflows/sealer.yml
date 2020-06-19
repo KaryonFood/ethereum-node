@@ -19,3 +19,4 @@ jobs:
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
           repository: f2fmarket/ethereum-node
           tags: sealer
+          path: sealer/Dockerfile
