@@ -5,7 +5,7 @@ on:
       - master
 
 jobs:
-build peer:
-  name: Build
+  build:
+  name: Build peer
   runs-on: ubuntu-latest
   steps:

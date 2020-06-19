@@ -5,8 +5,8 @@ on:
       - master
 
 jobs:
-  build sealer:
-    name: Build
+  build:
+    name: Build sealer
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
