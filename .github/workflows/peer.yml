@@ -1,1 +1,11 @@
 name: Build Sealer
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+build peer:
+  name: Build peer
+  runs-on: ubuntu-latest
+  steps:

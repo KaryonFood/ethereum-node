@@ -1,8 +1,12 @@
 name: Build Sealer
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   build sealer:
-    name: Build
+    name: Build sealer
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
