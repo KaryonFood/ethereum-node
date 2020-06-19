@@ -19,7 +19,7 @@ RUN apt-get update \
 
 WORKDIR "/miner"
 COPY *.sh /usr/bin/
-COPY ../genesis.json /genesis/genesis.json
+COPY genesis.json /genesis/genesis.json
 RUN chmod +x /usr/bin/run.sh
 
 CMD ["/usr/bin/run.sh"]

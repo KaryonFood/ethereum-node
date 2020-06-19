@@ -12,6 +12,10 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v2
 
+      - name: Build docker container
+        run: |
+          cp ./genesis.json peer/genesis.json
+
       - name: Build and push Docker images
         uses: docker/build-push-action@v1.1.0
         with:
