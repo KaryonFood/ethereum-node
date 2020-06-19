@@ -6,6 +6,6 @@ on:
 
 jobs:
 build peer:
-  name: Build peer
+  name: Build
   runs-on: ubuntu-latest
   steps:
