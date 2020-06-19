@@ -12,9 +12,11 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v2
 
-      - name: Build docker container
-        run: |
-          docker build peer/ --tag f2fmarket/ethereum-node:peer
-          docker push f2fmarket/ethereum-node:peer
-        env:
-          CI: false
+      - name: Build and push Docker images
+        uses: docker/build-push-action@v1.1.0
+        with:
+          username: ${{ secrets.DOCKERHUB_USER }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+          repository: f2fmarket/ethereum-node
+          tags: peer
+          path: peer/
