@@ -8,11 +8,11 @@ ENV binary=geth-alltools-linux-amd64-1.9.7-a718daa6.tar.gz \
     gethBaseUrl=https://gethstore.blob.core.windows.net/builds \
     bootnodeport=30301 \
     syncmode="full" \
-    networkid="4242" \
+    networkid="6942" \
     gasprice="0" \
     gcmode="archive" \
-    rpcapi="web3" \
-    rpcvhosts="localhost"
+    rpcapi="eth,net,web3" \
+    rpcvhosts="*"
 
 RUN apt-get update \
     && apt-get install -y wget \
