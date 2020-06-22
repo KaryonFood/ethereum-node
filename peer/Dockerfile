@@ -6,7 +6,7 @@ VOLUME ["/data"]
 
 ENV binary=geth-alltools-linux-amd64-1.9.7-a718daa6.tar.gz \
     gethBaseUrl=https://gethstore.blob.core.windows.net/builds \
-    bootnodeport=30301 \
+    bootnodeport=30303 \
     syncmode="full" \
     networkid="6942" \
     gasprice="0" \
