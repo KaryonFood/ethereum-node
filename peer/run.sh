@@ -10,4 +10,9 @@ fi
 
 chmod +x ./geth
 ./geth init genesis.json --datadir "/data"
+
+if [[ -n $bootnodeId && -n $bootnodeIp ]]; then
 exec ./geth --datadir "/data" --bootnodes "enode://$bootnodeId@$bootnodeIp:$bootnodeport" --networkid=$networkid --verbosity=4 --gasprice $gasprice --rpc --rpcaddr "0.0.0.0" --rpccorsdomain "*" --rpcapi=$rpcapi --syncmode $syncmode --gcmode $gcmode --rpcvhosts=*
+else
+exec ./geth --datadir "/data" --networkid=$networkid --verbosity=4 --gasprice $gasprice --rpc --rpcaddr "0.0.0.0" --rpccorsdomain "*" --rpcapi=$rpcapi --syncmode $syncmode --gcmode $gcmode --rpcvhosts=*
+fi
